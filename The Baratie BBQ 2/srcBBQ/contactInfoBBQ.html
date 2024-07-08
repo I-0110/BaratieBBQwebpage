@@ -1,0 +1,61 @@
+<body>
+<!--Part 1: Catering Details-->
+    <fieldset>
+        <legend>Catering Details</legend>
+        Date for the catering event:<input type="date"/><br/>
+        How many guests?<input type="number" placeholder="Between 20-100 guests"><br/>
+        <i>Note: We will not process orders less than 20 or more than 100 guests. Thanks!</i><br/>
+        Choose a Combo options-Price per Guest:
+        <select>
+            <option value="1">Burnt Ends and Pulled Pork  $20</option>
+            <option value="2">Smoked Sausage & Pulled Pork $15</option>
+            <option value="3">Pork Spare Ribs and Chicken (bone-in) $18</option>
+            <option value="Create">Create Your Own</option><br/>
+        </select><br/><br/>
+        *<i>For "Create Your Own" Option</i> Otherwise, skip.<br/>
+        Please select the meats for "Create Your Own":<br/>
+        <input type="checkbox" name="add-on" value="ppork"/>$10 Pulled Pork
+        <input type="checkbox" name="add-on" value="bends"/>$12 Burnt Ends
+        <input type="checkbox" name="add-on" value="sturkey"/>$8 Smoked Turkey<br/>
+        <input type="checkbox" name="add-on" value="brisket"/>$12 Brisket
+        <input type="checkbox" name="add-on" value="ssausage"/>$6 Smoked Sausages
+        <input type="checkbox" name="add-on" value="ham"/>$8 Smoked Ham<br/>
+        <input type="checkbox" name="add-on" value="bribs"/>$18 Beef Ribs
+        <input type="checkbox" name="add-on" value="psribs"/>$10 Pork Spare Ribs
+        <input type="checkbox" name="add-on" value="chicken"/>$7 Smoked Chicken (Bone-in)<br/>
+    </fieldset>
+<!--Part 2: Contact Info.-->
+    <fieldset>
+        <legend>Contact Information</legend>
+        Your name:<input type="text" placeholder="First Name"/><input type="text" placeholder="Last Name"/><br/>
+        Your phone number:<input type="tel" placeholder="555-555-1212"/><br/>
+        Your email:<input type="email" placeholder="joedoe@example.com"/><br/>
+        Address for Catering Services:<input type="address"/><br/>
+    </fieldset>
+<!--Part 3: Payment Details-->
+    <fieldset>
+        <legend>Payment Details</legend>
+        <form action="/process-payment" method="post">
+            <label for="cardholder">Cardholder Name</label>
+            <input type="text" id="cardholder" name="cardholder" required>
+            
+            <label for="cardnumber">Card Number</label>
+            <input type="text" id="cardnumber" name="cardnumber" required><br/>
+            
+            <label for="expiry">Expiry Date (MM/YYYY)</label>
+            <input type="text" id="expiry" name="expiry" placeholder="MM/YYYY" required>
+            
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" required>
+    </fieldset>
+<!--Part 4: Complete Order-->
+    <form>
+    <input type="submit" value="Place Order">
+    <input type="reset" value="Reset">
+    </form><br/>
+<!--Back to Homepage-->
+    <div id="footer">
+    <h4>Thanks for catering with us!</h4>
+    <a href="indexBBQ.html">Return</a>
+    
+</body>
